@@ -15,10 +15,13 @@ namespace Week1CodeChallenge
                 Console.WriteLine(FizzBuzz(i));
             }
 
-            for (int i = 92; i > 79; i--)
+            for (int i = 92; i > 78; i--)
             {
                 Console.WriteLine(FizzBuzz(i));
             }
+
+            Console.WriteLine(Yodaizer("I like code"));
+
             Console.ReadKey();
         }
 
@@ -42,9 +45,11 @@ namespace Week1CodeChallenge
                 return number.ToString();
             }
         }
-        public static string Yodaizer(string text)
+        public static string Yodaizer(string yoda)
         {
-            return string.Empty;
+            string[] theForce = yoda.Split(' ');
+            Array.Reverse(theForce);
+            return string.Join(" ", theForce);
         }
         public static bool IsPrime(int number)
         {
